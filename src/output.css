@@ -203,6 +203,9 @@
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -401,9 +404,6 @@
   .bg-\[\.\/\] {
     background-color: ./;
   }
-  .bg-\[ur\] {
-    background-color: ur;
-  }
   .bg-\[url\] {
     background-color: url;
   }
@@ -437,17 +437,11 @@
   .bg-\[url\(\'\/frontend\/images_required\/portrait-excited-happy-shopaholic-woman-holding-shopping-bags-showing-plastic-credit-card-smi\.jpg\'\)\] {
     background-image: url('/frontend/images_required/portrait-excited-happy-shopaholic-woman-holding-shopping-bags-showing-plastic-credit-card-smi.jpg');
   }
-  .bg-\[url\(\'\/path\/to\/your\/image\.jpg\'\)\] {
-    background-image: url('/path/to/your/image.jpg');
-  }
   .bg-\[url\(\)\] {
     background-image: url();
   }
   .bg-\[url\(\.\)\] {
     background-image: url(.);
-  }
-  .bg-\[url\(\.\/\)\] {
-    background-image: url(./);
   }
   .bg-\[url\(\.\/frontend\/images_required\/portrait-excited-happy-shopaholic-woman-holding-shopping-bags-showing-plastic-credit-card-smi\.jpg\)\] {
     background-image: url(./frontend/images_required/portrait-excited-happy-shopaholic-woman-holding-shopping-bags-showing-plastic-credit-card-smi.jpg);
@@ -493,6 +487,9 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .pt-24 {
+    padding-top: calc(var(--spacing) * 24);
   }
   .text-center {
     text-align: center;
@@ -581,6 +578,10 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .brightness-75 {
+    --tw-brightness: brightness(75%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .brightness-80 {
     --tw-brightness: brightness(80%);
