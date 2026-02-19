@@ -1,7 +1,6 @@
 const form = document.getElementById("adminsignupform");
 
-form.addEventListener("submit", function (e) 
-{
+form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -9,15 +8,14 @@ form.addEventListener("submit", function (e)
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document.getElementById("confirmPassword").value.trim();
 
-    if (password !== confirmPassword) 
-        {
-            alert("Passwords do not match!");
-            return;
-        }
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check duplicate email
+
     const exists = users.some(user => user.email === email);
 
     if (exists) {

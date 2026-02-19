@@ -21,5 +21,5 @@ form.addEventListener("submit", function (e) {
 
     localStorage.setItem("currentUser", JSON.stringify(admin));
 
-    window.location.href = "admin_product.html";
+    window.location.href = "admin_products.html";
 });
