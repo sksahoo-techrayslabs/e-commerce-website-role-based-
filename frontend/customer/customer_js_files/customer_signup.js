@@ -1,4 +1,4 @@
-const form = document.getElementById("adminsignupform");
+const form = document.getElementById("customersignupform");
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -15,26 +15,27 @@ form.addEventListener("submit", function (e) {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-
-    const exists = users.some(user => user.email === email);
+    //  check email duplicate is present or not
+   const exists = users.some(user => user.email === email);
 
     if (exists) {
         alert("Email already registered!");
         return;
     }
 
-    const newAdmin = {
+    const newuser = {
         name: name,
         email: email,
         password: password,
-        role: "admin"
+        role: "customer"
     };
 
-    users.push(newAdmin);
+    users.push(newuser);
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Admin account created successfully !");
+    alert("Customer account created !");
 
-    window.location.href = "login_admin.html";
+    window.location.href = "login_customer.html";
 });
+
