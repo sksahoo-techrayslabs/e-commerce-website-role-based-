@@ -1,11 +1,15 @@
-   let form = document.getElementById("productform");
-  let table = document.getElementById("producttable");
+
+
+
+
+let form = document.getElementById("productform");
+let table = document.getElementById("producttable");
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-let editIndex = -1;  
+let editIndex = -1;
 
-//         Show products in table
+
 function showProducts() {
 
     table.innerHTML = "";
@@ -39,7 +43,6 @@ function showProducts() {
 
 
 
-//                         Add or Update product
 form.addEventListener("submit", function (e) {
 
     e.preventDefault();
@@ -53,10 +56,10 @@ form.addEventListener("submit", function (e) {
     };
 
     if (editIndex === -1) {
-        
+
         products.push(product);
     } else {
-        
+
         products[editIndex] = product;
         editIndex = -1;
     }
@@ -69,13 +72,6 @@ form.addEventListener("submit", function (e) {
 
 
 
-
-
-
-
-
-
-//                                          Delete product
 function deleteProduct(index) {
     products.splice(index, 1);
     showProducts();
@@ -84,7 +80,7 @@ function deleteProduct(index) {
 
 
 
-                        // Edit product
+
 function editProduct(index) {
 
     let p = products[index];

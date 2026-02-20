@@ -1,40 +1,44 @@
-const form = document.getElementById("adminsignupform");
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const confirmPassword = document.getElementById("confirmPassword").value.trim();
-
-    if (password !== confirmPassword) {
-        alert("Passwords do not match!");
-        return;
-    }
-
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+ // i am not using  admin signup page because i  have hardcoded admin details in admin login page
 
 
-    const exists = users.some(user => user.email === email);
+// const form = document.getElementById("adminsignupform");
 
-    if (exists) {
-        alert("Email already registered!");
-        return;
-    }
+// form.addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    const newAdmin = {
-        name: name,
-        email: email,
-        password: password,
-        role: "admin"
-    };
+//     const name = document.getElementById("name").value.trim();
+//     const email = document.getElementById("email").value.trim();
+//     const password = document.getElementById("password").value.trim();
+//     const confirmPassword = document.getElementById("confirmPassword").value.trim();
 
-    users.push(newAdmin);
+//     if (password !== confirmPassword) {
+//         alert("Passwords do not match!");
+//         return;
+//     }
 
-    localStorage.setItem("users", JSON.stringify(users));
+//     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    alert("Admin account created successfully !");
 
-    window.location.href = "login_admin.html";
-});
+//     const exists = users.some(user => user.email === email);
+
+//     if (exists) {
+//         alert("Email already registered!");
+//         return;
+//     }
+
+//     const newAdmin = {
+//         name: name,
+//         email: email,
+//         password: password,
+//         role: "admin"
+//     };
+
+//     users.push(newAdmin);
+
+//     localStorage.setItem("users", JSON.stringify(users));
+
+//     alert("Admin account created successfully !");
+
+//     window.location.href = "login_admin.html";
+// });

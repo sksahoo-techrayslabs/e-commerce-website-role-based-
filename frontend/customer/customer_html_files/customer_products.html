@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer product page</title>
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen pt-30">
+
+
+
+ <!-- importing admin nav bar through js -->
+    <div id="customernavbar" class="w-full fixed top-0 left-0 z-50 rounded-full"></div>
+
+
+    <!-- Background Image -->
+    <div>
+        <img src="/frontend/images_required/background image.jpg" alt="Shopping"
+            class="absolute inset-0 w-full h-full object-cover -z-10 brightness-80">
+
+    </div>
+
+
+
+
+
+
+    <h1 class="text-2xl font-bold text-center mt-8">
+        Available Products
+    </h1>
+
+    <div id="productContainer"
+         class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
+    </div>
+
+    
+
+
+     
+
+ <script src="/frontend/authorization/auth.js"></script>
+    <script>
+        requireLogin();
+        
+    </script>
+
+<script src="/frontend/customer/customer_js_files/customer_product.js"></script>
+<script src="/frontend/customer/customer_js_files/customernavloader.js"></script>
+</body>
+</html>

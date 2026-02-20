@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 3 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin_controls</title>
+    <title>admin products</title>
     <link href="/src/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 min-h-screen relative">
+<body class="bg-gray-100 min-h-screen relative pt-20">
 
     <!-- importing admin nav bar through js -->
     <div id="adminnavbar" class="w-full fixed top-0 left-0 z-50 rounded-full"></div>
@@ -26,62 +27,69 @@
 
 
 
-        <div class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-lg">
+        <div class="w-full max-w-4xl bg-yellow-100 p-8 rounded-2xl shadow-lg">
 
 
 
             <!-- heading manage products-->
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex justify-center items-center mb-6">
                 <h1 class="text-2xl font-bold">Manage Products</h1>
 
             </div>
 
             <!-- Table -->
-            <div class="overflow-x-auto">
-
-                <form id="productform" class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
-
-                    <input id="pid" placeholder="ID" class="border px-3 py-2 rounded-xl">
-
-                    <input id="category" placeholder="Category" class="border px-3 py-2 rounded-xl">
-
-                    <input id="productname" placeholder="Product Name" class="border px-3 py-2 rounded-xl">
-
-                    <input id="price" placeholder="Price" class="border px-3 py-2 rounded-xl">
-
-                    <input id="stock" placeholder="Stock" class="border px-3 py-2 rounded-xl">
-
-                    <button type="submit" class="bg-blue-600 text-white rounded-xl px-4">
-                        Add
-                    </button>
-
-                </form>
 
 
+            <form id="productform" class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
 
-                <table class="min-w-full text-left">
+                <input id="pid" placeholder="ID" class="border px-3 py-2 rounded-xl">
 
-                    <thead class="border-b">
-                        <tr>
-                            <th class="p-3">ID</th>
-                            <th class="p-3">Category</th>
-                            <th class="p-3">Product Name</th>
-                            <th class="p-3">Price</th>
-                            <th class="p-3">Stock</th>
-                            <th class="p-3">Actions</th>
-                        </tr>
-                    </thead>
+                <input id="category" placeholder="Category" class="border px-3 py-2 rounded-xl">
 
-                    <tbody id="producttable" class="divide-y"></tbody>
+                <input id="productname" placeholder="Product Name" class="border px-3 py-2 rounded-xl">
 
-                </table>
+                <input id="price" placeholder="Price" class="border px-3 py-2 rounded-xl">
+
+                <input id="stock" placeholder="Stock" class="border px-3 py-2 rounded-xl">
+
+                <button type="submit" class="bg-blue-600 text-white rounded-xl px-4">
+                    Add
+                </button>
+
+            </form>
 
 
-            </div>
+
+            <table class="min-w-full text-left">
+
+                <thead class="border">
+                    <tr>
+                        <th class="p-3">ID</th>
+                        <th class="p-3">Category</th>
+                        <th class="p-3">Product Name</th>
+                        <th class="p-3">Price</th>
+                        <th class="p-3">Stock</th>
+                        <th class="p-3">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="producttable" class="divide-y"></tbody>
+
+            </table>
+
+
+
 
         </div>
 
     </div>
+
+
+    <script src="/frontend/authorization/auth.js"></script>
+    <script>
+        requireLogin();
+        requireAdmin();
+    </script>
 
     <script src="/frontend/admin/admin_js_files/adminnavloader.js"></script>
     <script src="/frontend/admin/admin_js_files/admin_product.js"></script>

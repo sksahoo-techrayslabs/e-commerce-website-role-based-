@@ -8,7 +8,7 @@
     <link href="/src/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 min-h-screen relative">
+<body class="bg-gray-100 min-h-screen  pt-20">
 
     <!-- importing admin nav bar through js -->
 
@@ -23,27 +23,37 @@
 
     <div class="flex justify-center pt-24">
 
-        <div class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-lg">
+        <div class="w-full max-w-4xl bg-yellow-100 p-8 rounded-2xl shadow-lg">
 
             <h1 class="text-2xl font-bold mb-8 text-center">
-                Admin Dashboard
+                ADMIN DASHBOARD
             </h1>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 
-                <div class="bg-blue-200 p-6 rounded-xl">
-                    <h2 class="text-lg font-semibold">Total Products</h2>
+                <div class="bg-red-200 p-6 rounded-xl">
+                    <h2 class="text-lg font-semibold">Total products</h2>
                     <p id="totalproducts" class="text-3xl font-bold mt-2">0</p>
                 </div>
 
                 <div class="bg-green-200 p-6 rounded-xl">
-                    <h2 class="text-lg font-semibold">Total Orders</h2>
+                    <h2 class="text-lg font-semibold">Total orders</h2>
                     <p id="totalorders" class="text-3xl font-bold mt-2">0</p>
                 </div>
 
                 <div class="bg-yellow-200 p-6 rounded-xl">
-                    <h2 class="text-lg font-semibold">Total Users</h2>
+                    <h2 class="text-lg font-semibold">Total users</h2>
                     <p id="totalusers" class="text-3xl font-bold mt-2">0</p>
+                </div>
+
+                <div class="bg-blue-200 p-6 rounded-xl">
+                    <h2 class="text-lg font-semibold">Total admins</h2>
+                    <p id="totaladmins" class="text-3xl font-bold mt-2">0</p>
+                </div>
+
+                <div class="bg-orange-200 p-6 rounded-xl">
+                    <h2 class="text-lg font-semibold">Total customers</h2>
+                    <p id="totalcustomers" class="text-3xl font-bold mt-2">0</p>
                 </div>
 
             </div>
@@ -53,7 +63,11 @@
     </div>
 
 
-
+    <script src="/frontend/authorization/auth.js"></script>
+    <script>
+        requireLogin();
+        requireAdmin();
+    </script>
     <script src="/frontend/admin/admin_js_files/adminnavloader.js"></script>
     <script src="/frontend/admin/admin_js_files/admin_dashboard.js"></script>
 </body>
